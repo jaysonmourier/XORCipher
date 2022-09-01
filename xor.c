@@ -15,7 +15,7 @@
 #define BUFFER_SIZE 255
 #define XOR_VALUE '\x35'
 #define READ_BINARY "rb+"
-#define WRITE_BINARY "wb"
+#define WRITE_BINARY "wb+"
 #define SOURCE_FILE "file.txt"
 #define OUTPUT_FILE "file.txt.xor"
 

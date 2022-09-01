@@ -1,0 +1,1 @@
+gcc -std=c11 -Wall -Wextra -pedantic -Ofast xor.c -o bin/xor.exe

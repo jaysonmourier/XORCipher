@@ -57,7 +57,7 @@ void xor(FILE *__restrict__ file, FILE *__restrict__ dst)
 {
     uint8_t bufferSrc[BUFFER_SIZE];
     uint8_t bufferDst[BUFFER_SIZE];
-    long long n;
+    unsigned long long n;
 
     memset(bufferSrc, '\0', sizeof(uint8_t) * BUFFER_SIZE);
     memset(bufferDst, '\0', sizeof(uint8_t) * BUFFER_SIZE);
@@ -66,7 +66,7 @@ void xor(FILE *__restrict__ file, FILE *__restrict__ dst)
     while ((n = fread(bufferSrc, sizeof(uint8_t), BUFFER_SIZE, file)) > 0)
     {
         #pragma omp parallel for
-        for(long long i = 0; i < n; ++i)
+        for(unsigned long long i = 0; i < n; ++i)
         {
             bufferDst[i] = bufferSrc[i] ^ XOR_VALUE;
         }
